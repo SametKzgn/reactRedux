@@ -1,25 +1,30 @@
-import logo from './logo.svg';
+import styled from "styled-components";
 import './App.css';
+import Weather from "./component/Weather";
+
+
+const MainWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("https://wallpapercave.com/w/tAXPmkI.jpg");
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+`;
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <MainWrapper>
+
+            <Weather/>
+        </MainWrapper>
+    );
 }
 
 export default App;
